@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskBuy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стилі для модальних вікон */
+        .modal {
+            display: none; /* Приховуємо модальні вікна за замовчуванням */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TaskBuy</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Головна</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="">Про нас</a></li>
+            <li><a href="#testimonials">Відгуки</a></li>
+            <li><a href="#contact">Контакти</a></li>
+        </ul>
+    </nav>
+    <div class="auth-buttons">
+        <a href="#login" class="btn">Вхід</a>
+        <a href="#signup" class="btn">Реєстрація</a>
+    </div>
+</header>
+
+<div id="login" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="login-form">
+            <h2>Вхід</h2>
+            <input type="text" id="login-username" name="username" placeholder="Ім'я користувача" required>
+            <input type="password" id="login-password" name="password" placeholder="Пароль" required>
+            <button type="submit" class="submit-btn">Увійти</button>
+        </form>
+    </div>
+</div>
+
+<div id="signup" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="signup-form">
+            <h2>Реєстрація</h2>
+            <input type="text" id="signup-username" name="username" placeholder="Ім'я користувача" required>
+            <input type="password" id="signup-password" name="password" placeholder="Пароль" required>
+            <input type="email" id="signup-email" name="email" placeholder="Email" required>
+            <button type="submit" class="submit-btn">Зареєструватися</button>
+        </form>
+    </div>
+</div>
+
+<section id="home">
+    <div class="hero">
+        <h2>Ласкаво просимо до наших послуг</h2>
+        <p>TaskBuy — це платформа, де користувачі можуть швидко і зручно замовляти різноманітні послуги від перевірених надавачів. Наш сайт орієнтований на те, щоб забезпечити високу якість обслуговування та максимально задовольнити потреби клієнтів. У нас ви знайдете широкий спектр послуг: від домашнього ремонту до професійних консультацій.
+            <h2>Що можна зробити на сайті:</h2>
+            <p>1. Перегляд послуг: Користувачі можуть переглядати каталог доступних послуг, організований за категоріями для зручності пошуку.</p>
+            <p>2. Замовлення послуг: Легко і швидко замовляйте потрібну послугу, заповнивши просту форму заявки.</p>
+            <p>3. Оцінка і відгуки: Читайте відгуки інших користувачів про надавачів послуг та залишайте свої власні оцінки після виконання замовлення.</p>
+            <p>4. Контакти: Зв'язуйтеся з нами через форму зворотного зв'язку, по телефону або через електронну пошту для отримання додаткової інформації або вирішення будь-яких питань.</p>
+            <p>5. Про нас: Дізнавайтеся більше про нашу компанію, нашу місію і цінності, а також ознайомлюйтеся з історіями успіху наших клієнтів.</p>
+        </p>
+        <a href="#services" class="btn">Дізнатися більше</a>
+    </div>
+</section>
+
+<section id="services" class="services-section">
+    <h2>Наші Послуги</h2>
+    <div class="services-container">
+        <div class="service">
+            <h3>Домашній ремонт</h3>
+            <p>Кваліфіковані майстри з ремонту будь-яких приміщень: від невеликих квартир до великих будинків.</p>
+            <img src="https://www.vesty.co.il/PicServer5/2018/03/21/8421720/shiputs.jpg" height="150" weight="200">
+        </div>
+        <div class="service">
+            <h3>Побутові послуги</h3>
+            <p>Послуги прибирання, прасування, догляду за дітьми та інше, що полегшить ваше повсякденне життя.</p>
+            <img src="https://storage.dtkt.ua/files/NikoNews/PobutPosluga01.jpg" height="150" weight="200">
+        </div>
+        <div class="service">
+            <h3>IT підтримка</h3>
+            <p>Комп'ютерна допомога, налаштування мережі, ремонт техніки та інші IT послуги.</p>
+            <img src="https://techexpert.ua/wp-content/uploads/2019/07/outsourcing-team.jpg" height="130" weight="120">
+        </div>
+        <div class="service">
+            <h3>Транспортні послуги</h3>
+            <p>Перевезення вантажів, послуги таксі, оренда автомобілів з водієм.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuQouPQ0pkUyDwvUMB2xUi1VctiFPCkek_hg&usqp=CAU" height="130" weight="120">
+        </div>
+        <div class="service">
+            <h3>Консультації</h3>
+            <p>Юридичні, фінансові, медичні консультації від сертифікованих спеціалістів.</p>
+            <img src="https://holdyou.net/media/images/2023/11/9933500428b17695931186070c7d7208.png" height="130" weight="120">
+        </div>
+        <div class="service">
+            <h3>Освітні послуги</h3>
+            <p>Репетиторство, мовні курси, професійне навчання.</p>
+            <img src="https://lh3.googleusercontent.com/proxy/1r-KI38QKLntEyAdmRiOoXEbspNcYdvxwBJ4nmnPMEJIS56lxpj_PuPopxSvNQzQbBsIEaadh76lWvqTug5O-12pcBM4-QxiU6XjV4hCMQCfl5n-uo9gNZiA2wGl" height="110" weight="120">
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>Про нас</h2>
+    <p>TaskBuy — це сучасна платформа для замовлення та надання послуг, яка створена з метою зробити процес пошуку та замовлення послуг максимально зручним та ефективним для наших клієнтів. Ми прагнемо до того, щоб кожен користувач міг швидко знайти потрібну послугу та залишився задоволеним її якістю.</p>
+    <p>Наша місія полягає в тому, щоб забезпечити високий рівень обслуговування та створити платформу, де кожен користувач може знайти надійного виконавця для вирішення своїх потреб. Ми співпрацюємо тільки з перевіреними та кваліфікованими фахівцями, які гарантують високий рівень якості своїх послуг.</p>
+    <p>Наші основні цінності — це професіоналізм, надійність та орієнтація на клієнта. Ми постійно вдосконалюємо наш сервіс, щоб зробити його ще зручнішим та ефективнішим. Завдяки нашим інноваційним рішенням, замовлення послуг стає простим та безпечним процесом.</p>
+    <p>Ми пишаємося нашими досягненнями та історіями успіху наших клієнтів. Кожен день ми працюємо над тим, щоб покращити наш сервіс та відповідати найвищим стандартам якості. Дякуємо, що обрали TaskBuy!</p>
+</section>
+
+<section id="testimonials">
+    <h2>Відгуки клієнтів</h2>
+    <div class="testimonials-container" id="testimonials-container">
+        <div class="testimonial">
+            <p>"TaskBuy перевершив всі мої очікування! Дуже швидко та якісно. Рекомендую всім!"</p>
+            <h4>- Дмитро Щербанич</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Вперше скористався їхніми послугами і залишився задоволений. Обов'язково буду звертатися ще."</p>
+            <h4>- Максим Главацький</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Чудовий сервіс! Професійно та оперативно. Найкращі в своїй справі!"</p>
+            <h4>- Денис Цифра</h4>
+        </div>
+    </div>
+    <button class="load-more-btn" id="load-more-btn">Більше відгуків</button>
+</section>
+
+<h3>Додати відгук</h3>
+<form id="testimonial-form">
+    <input type="text" id="name" name="name" placeholder="Ваше ім'я" required>
+    <textarea id="review" name="review" rows="4" placeholder="Ваш відгук" required></textarea>
+    <button type="submit" class="submit-btn">Відправити</button>
+</form>
+
+<section id="contact">
+    <h2>Контакти</h2>
+    <p>Зв'яжіться з нами за номером: (098) 644-68-22 або напишіть нам на email: info@taskbuy.com</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 TaskBuy. Усі права захищені.</p>
+</footer>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d784.2652552387411!2d22.270784596261965!3d48.61092731061779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473918f8d10ec0ad%3A0x4c906489bf687926!2z0J_QoNCY0JLQkNCi0J3QmNCZINCf0IbQlNCf0KDQmNCE0JzQldCm0Kwg0JrQo9Cn0JjQnSDQki4g0JIu!5e0!3m2!1suk!2sua!4v1716641054008!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<script>
+// Отримуємо модальні вікна
+var loginModal = document.getElementById('login');
+var signupModal = document.getElementById('signup');
+
+// Отримуємо кнопки, які відкривають модальні вікна
+var loginBtn = document.querySelector('.auth-buttons a[href="#login"]');
+var signupBtn = document.querySelector('.auth-buttons a[href="#signup"]');
+
+// Отримуємо елементи <span>, які закривають модальні вікна
+var closeBtns = document.getElementsByClassName('close');
+
+// Відкриваємо модальне вікно "Вхід" при натисканні на кнопку
+loginBtn.onclick = function(event) {
+    event.preventDefault();
+    loginModal.style.display = "block";
+}
+
+// Відкриваємо модальне вікно "Реєстрація" при натисканні на кнопку
+signupBtn.onclick = function(event) {
+    event.preventDefault();
+    signupModal.style.display = "block";
+}
+
+// Закриваємо модальне вікно при натисканні на <span> (x)
+for (var i = 0; i < closeBtns.length; i++) {
+    closeBtns[i].onclick = function() {
+        this.parentElement.parentElement.style.display = "none";
+    }
+}
+
+// Закриваємо модальне вікно при натисканні будь-де поза його межами
+window.onclick = function(event) {
+    if (event.target == loginModal) {
+        loginModal.style.display = "none";
+    }
+    if (event.target == signupModal) {
+        signupModal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
